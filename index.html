@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahiba Choudhary | Portfolio</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#0f172a;
+  color:#fff;
+}
+header{
+  text-align:center;
+  padding:30px;
+}
+header h1{
+  margin:0;
+  font-size:32px;
+}
+header p{
+  color:#cbd5f5;
+}
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:20px 0;
+}
+nav button{
+  padding:10px 18px;
+  border:none;
+  border-radius:20px;
+  background:#1e293b;
+  color:#fff;
+  cursor:pointer;
+}
+nav button:hover{
+  background:#38bdf8;
+  color:#000;
+}
+.section{
+  display:none;
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+.section h2{
+  color:#38bdf8;
+  border-bottom:2px solid #38bdf8;
+  padding-bottom:5px;
+}
+.card{
+  background:#1e293b;
+  padding:15px;
+  border-radius:10px;
+  margin-top:15px;
+}
+ul{
+  line-height:1.8;
+}
+a{
+  color:#38bdf8;
+  text-decoration:none;
+}
+footer{
+  text-align:center;
+  padding:15px;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Sahiba Choudhary</h1>
+  <p>BCA Student | Web Developer</p>
+</header>
+
+<nav>
+  <button onclick="showSection('all')">ALL</button>
+  <button onclick="showSection('about')">ABOUT</button>
+  <button onclick="showSection('resume')">RESUME</button>
+  <button onclick="showSection('skills')">SKILLS</button>
+  <button onclick="showSection('projects')">PROJECTS</button>
+  <button onclick="showSection('certificate')">CERTIFICATE</button>
+  <button onclick="showSection('contact')">CONTACT</button>
+</nav>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+<h2>About Me</h2>
+<div class="card">
+<p>
+I am a passionate student with a strong interest in technology and web development.
+I enjoy learning new skills and working on practical projects that help me improve my knowledge.
+I am focused on writing clean code, building user-friendly websites, and growing step by step as a developer.
+My goal is to gain experience, enhance my skills, and build projects that create real value.
+</p>
+</div>
+</div>
+
+<!-- RESUME -->
+<div id="resume" class="section">
+<h2>Resume</h2>
+<div class="card">
+<p><b>Course:</b> Bachelor of Computer Applications (BCA)</p>
+<p><b>Interest:</b> Web Development, Software Development</p>
+<p><b>Tools:</b> VS Code, Git & GitHub</p>
+</div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section">
+<h2>Skills</h2>
+<div class="card">
+<ul>
+<li>Basic Knowledge of Java</li>
+<li>Basic Knowledge of Data Structure and Algorithms</li>
+<li>MySQL & SQL</li>
+<li>Python</li>
+<li>Computer Networking</li>
+<li>Operating System</li>
+</ul>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>Student Learning Website</h3>
+<p><b>Objective:</b> Online platform for students to access courses and study material.</p>
+<p><b>Users:</b> Admin, Student</p>
+<p><b>Features:</b> Login, Courses, Materials, Progress Tracking, Notifications</p>
+<p><b>Technologies:</b> HTML, CSS, JavaScript, Node.js / PHP, MySQL, Python</p>
+</div>
+
+<div class="card">
+<h3>Hotel Management System</h3>
+<p><b>Objective:</b> Automates hotel booking and management operations.</p>
+<p><b>Users:</b> Admin, Staff, Customer</p>
+<p><b>Features:</b> Room Booking, Billing, Services, Reports</p>
+<p><b>Technologies:</b> HTML, CSS, JavaScript, Python (Flask) / PHP, MySQL</p>
+</div>
+</div>
+
+<!-- CERTIFICATE -->
+<div id="certificate" class="section">
+<h2>Certificates</h2>
+<div class="card">
+<p>Certificates will be added soon.</p>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+<h2>Contact</h2>
+<div class="card">
+<p><b>Email:</b> sahiba2343@gmail.com</p>
+<p><b>Phone:</b> +91 93541 06412</p>
+<p><b>GitHub:</b> <a href="https://github.com/" target="_blank">github.com</a></p>
+<p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sahiba-choudhary-9982953a0" target="_blank">LinkedIn Profile</a></p>
+</div>
+</div>
+
+<footer>
+© 2026 Sahiba Choudhary | Portfolio
+</footer>
+
+<script>
+function showSection(id){
+  let sections=document.querySelectorAll('.section');
+  sections.forEach(sec=>sec.style.display='none');
+
+  if(id==='all'){
+    sections.forEach(sec=>sec.style.display='block');
+  }else{
+    document.getElementById(id).style.display='block';
+  }
+}
+showSection('all');
+</script>
+
+</body>
+</html>
